@@ -1,7 +1,7 @@
 LiquidValidations
 =================
 
-Some basic validation for Liquid.
+Rails plugin to perform some basic validations for Liquid.
 
 
 Example

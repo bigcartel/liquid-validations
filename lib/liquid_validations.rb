@@ -1,5 +1,4 @@
-module LiquidValidations
-  
+module LiquidValidations  
   def validates_liquid_of(*attr_names)
     configuration = { :message => I18n.translate('activerecord.errors.messages')[:invalid], :on => :save }
     configuration.update(attr_names.extract_options!)
@@ -15,7 +14,7 @@ module LiquidValidations
       end    
       
       for error in errors
-        record.errors.add_to_base(friendly_liquid_error(error) + " in your #{attr_name}")
+        record.errors.add_to_base(friendly_liquid_error(error) + " in your #{ friendly_attr_name(attr_name) }")
       end
       
     end    
@@ -32,29 +31,32 @@ module LiquidValidations
       value         = value.to_s
       
       variable      = configuration[:variable].to_s
-      variable_re   = /\{\{\s*#{variable}( .*)?\}\}/
+      variable_re   = /\{\{\s*#{ variable }( .*)?\}\}/
 
       container     = configuration[:container].to_s
-      container_re  = /<\s*#{container}.*>.*#{variable_re}.*<\/\s*#{container}\s*>/im
+      container_re  = /<\s*#{ container }.*>.*#{ variable_re }.*<\/\s*#{ container }\s*>/im
 
       if container.blank? && !(value =~ variable_re)
         
-        record.errors.add_to_base("You must include \\\\{{ {{ #{variable} }} }} in your #{attr_name.humanize.downcase}") 
+        record.errors.add_to_base("You must include \\\\{{ {{ #{ variable } }} }} in your #{ friendly_attr_name(attr_name) }") 
       
       elsif !container.blank? && !(value =~ container_re)
       
-        record.errors.add_to_base("You must include \\\\{{ {{ #{variable} }} }} inside the <#{container}> tag of your #{attr_name.humanize.downcase}")
+        record.errors.add_to_base("You must include \\\\{{ {{ #{ variable } }} }} inside the <#{ container }> tag of your #{ friendly_attr_name(attr_name) }")
       
       end   
     end
   end
   
-  private
+private
+
+	def friendly_attr_name(attr_name)
+		attr_name.humanize.downcase
+	end
   
   def friendly_liquid_error(error)
     error.gsub('liquid', '').
           gsub('Liquid', '').
           gsub(/terminated with regexp:.+/, 'closed')
-  end
-  
+  end  
 end
