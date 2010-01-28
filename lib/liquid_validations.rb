@@ -51,7 +51,7 @@ module LiquidValidations
 private
 
 	def friendly_attr_name(attr_name)
-		attr_name.humanize.downcase
+		attr_name.to_s.humanize.downcase
 	end
   
   def friendly_liquid_error(error)
