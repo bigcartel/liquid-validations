@@ -39,11 +39,11 @@ module LiquidValidations
 
       if container.blank? && !(value =~ variable_re)
         
-        record.errors.add_to_base("You must include \\\\{{ {{ #{variable} }} }} in your #{attr_name}") 
+        record.errors.add_to_base("You must include \\\\{{ {{ #{variable} }} }} in your #{attr_name.humanize.downcase}") 
       
       elsif !container.blank? && !(value =~ container_re)
       
-        record.errors.add_to_base("You must include \\\\{{ {{ #{variable} }} }} inside the <#{container}> tag of your #{attr_name}")
+        record.errors.add_to_base("You must include \\\\{{ {{ #{variable} }} }} inside the <#{container}> tag of your #{attr_name.humanize.downcase}")
       
       end   
     end
