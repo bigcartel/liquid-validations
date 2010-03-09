@@ -38,11 +38,11 @@ module LiquidValidations
 
       if container.blank? && !(value =~ variable_re)
         
-        record.errors.add_to_base("You must include \\\\{{ {{ #{ variable } }} }} in your #{ friendly_attr_name(attr_name) }") 
+        record.errors.add_to_base("You must include {{ #{ variable } }} in your #{ friendly_attr_name(attr_name) }") 
       
       elsif !container.blank? && !(value =~ container_re)
       
-        record.errors.add_to_base("You must include \\\\{{ {{ #{ variable } }} }} inside the <#{ container }> tag of your #{ friendly_attr_name(attr_name) }")
+        record.errors.add_to_base("You must include {{ #{ variable } }} inside the <#{ container }> tag of your #{ friendly_attr_name(attr_name) }")
       
       end   
     end
