@@ -1,0 +1,18 @@
+PATH
+  remote: .
+  specs:
+    liquid_validations (0.0.1)
+      liquid
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    liquid (2.4.1)
+    rake (10.0.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  liquid_validations!
+  rake
