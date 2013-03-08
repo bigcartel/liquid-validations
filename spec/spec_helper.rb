@@ -15,8 +15,7 @@ ActiveRecord::Migration.verbose = false
 def setup_db
   ActiveRecord::Schema.define(:version => 1) do
     create_table :mixins do |t|
-      t.column :liquid_string, :string
-      t.column :liquid_text, :text
+      t.column :content, :text
       t.column :created_at, :datetime
       t.column :updated_at, :datetime
     end
