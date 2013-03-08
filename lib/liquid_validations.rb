@@ -5,7 +5,8 @@ module LiquidValidations
     configuration = { :message => I18n.translate('activerecord.errors.messages')[:invalid], :on => :save }
     configuration.update(attr_names.extract_options!)
 
-    validates_each(attr_names, configuration) do |record, attr_name, value|
+    # validates_each attr_names, configuration do |record, attr_name, value|
+    validates_each attr_names do |record, attr_name, value|
       errors = []
 
       begin
@@ -57,9 +58,7 @@ module LiquidValidations
   end
 
   def friendly_liquid_error(error)
-    error.gsub('liquid', '').
-      gsub('Liquid', '').
-      gsub(/terminated with regexp:.+/, 'closed')
+    error.gsub('liquid', '').gsub('Liquid', '').gsub(/terminated with regexp:.+/, 'closed')
   end
 end
 
