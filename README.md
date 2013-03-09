@@ -54,23 +54,30 @@ Compatibility
 Liquid Validations has been tested (used) with the following:
 
 Rails
-  * 2.3 and up
-  * 3
+ * 2.3 and up
+ * 3
 
 Ruby
-  * 1.8
-  * 1.9
-  * 2.0
+ * 1.8
+ * 1.9
+ * 2.0
 
 That's not to say it won't work with Rails 1.2 or 4, but we haven't yet tested either of those.
 
-If you do try a version of Rails and it breaks then
+What about Sinatra
+--------
+
+This *should* work outside of Rails as long as your models are using ActiveRecord as the database mapper. However, this is just in theory, and hasn't been tested yet.
+
 
 Contributing
 --------
-  * Fork it
-  * Create a topic branch - `git checkout -b fix_rails_1-0`
-  * Push to your branch - `git push origin fix_rails_1-0`
-  * Create a Pull Request from your branch
+
+If you do find that something is busted, or think improvements can be made
+
+ * Fork it
+ * Create a topic branch - `git checkout -b fix_rails_1-0`
+ * Push to your branch - `git push origin fix_rails_1-0`
+ * Create a Pull Request from your branch
 
 That's it!
