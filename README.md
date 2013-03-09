@@ -1,7 +1,7 @@
 Liquid Validations
 =================
 
-ActiveModel style validations for Liquid content in your ActiveRecord models.
+ActiveRecord style validations for Liquid content in your ActiveRecord models.
 
 This gem makes 2 class methods available to your models:
   * `validates_liquid_of` - Ensures that the liquid content is valid and has all opening/closing tags.
