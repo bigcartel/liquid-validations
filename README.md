@@ -7,6 +7,13 @@ This gem makes 2 class methods available to your models:
   * `validates_liquid_of` - Ensures that the liquid content is valid and has all opening/closing tags.
   * `validates_presence_of_liquid_variable` - Useful to ensure your user content contains the specified Liquid variable(s).
 
+Installation
+--------
+
+`gem 'liquid-validations'` in your Gemfile.
+
+Then `bundle install` and you should be all set.
+
 
 Usage
 --------
