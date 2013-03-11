@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    liquid_validations (0.0.1)
+    liquid-validations (1.0.0)
       activerecord
       liquid
 
@@ -32,6 +32,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  liquid_validations!
+  liquid-validations!
   rake
   sqlite3
