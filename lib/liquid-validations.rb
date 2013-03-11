@@ -18,7 +18,6 @@ module LiquidValidations
       for error in errors
         record.errors.add(attr_name, friendly_liquid_error(error))
       end
-
     end
   end
 
