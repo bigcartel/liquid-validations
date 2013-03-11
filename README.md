@@ -1,4 +1,4 @@
-# Liquid Validations [![Build Status](https://travis-ci.org/bigcartel/liquid-validation.png)](https://travis-ci.org/bigcartel/liquid-validation)
+# Liquid Validations [![Build Status](https://travis-ci.org/bigcartel/liquid-validations.png)](https://travis-ci.org/bigcartel/liquid-validations)
 
 ActiveRecord style validations for Liquid content in your ActiveRecord models.
 
