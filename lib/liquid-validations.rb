@@ -50,7 +50,7 @@ module LiquidValidations
   end
 
   def friendly_liquid_error(error)
-    error.gsub('liquid', '').gsub('Liquid', '').gsub(/terminated with regexp:.+/, 'closed')
+    error.gsub(/liquid/i, '').gsub(/terminated with regexp:.+/, 'closed')
   end
 end
 
