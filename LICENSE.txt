@@ -1,4 +1,4 @@
-Copyright (c) 2013 Joshua Abbott
+Copyright (c) 2013 Big Cartel, LLC
 
 MIT License
 

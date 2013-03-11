@@ -4,13 +4,13 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'liquid_validations/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = 'liquid_validations'
+  gem.name          = 'liquid-validations'
   gem.version       = LiquidValidations::VERSION
-  gem.authors       = ['Joshua Abbott']
-  gem.email         = ['josh@bigcartel.com']
-  gem.description   = %q{ ActiveRecord style validations for Liquid content in your ActiveRecord models. See the README for the lowdown. }
+  gem.authors       = ['Matt Wigham', 'Joshua Abbott']
+  gem.email         = ['dev@bigcartel.com']
+  gem.description   = %q{ ActiveRecord style validations for Liquid content in your ActiveRecord models. See the README to get the lowdown. }
   gem.summary       = %q{ ActiveRecord style validations for Liquid content in your ActiveRecord models. }
-  gem.homepage      = 'https://github.com/bigcartel/liquid_validations'
+  gem.homepage      = 'https://github.com/bigcartel/liquid-validations'
   gem.license       = 'MIT'
 
   gem.files         = `git ls-files`.split($/)
