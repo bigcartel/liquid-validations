@@ -40,7 +40,7 @@ describe LiquidValidations do
   describe '.validates_presence_of_liquid_variable' do
     before do
       Mixin.instance_eval do
-        validates_presence_of_liquid_variable :content, variable: 'josh_is_awesome'
+        validates_presence_of_liquid_variable :content, :variable => 'josh_is_awesome'
       end
 
       @mixin = Mixin.new

@@ -8,7 +8,7 @@ require 'minitest/spec'
 require 'minitest/autorun'
 require 'minitest/pride'
 
-ActiveRecord::Base.establish_connection(adapter: 'sqlite3', dbfile: ':memory:', database: 'liquid_validations_test.db')
+ActiveRecord::Base.establish_connection(:adapter => 'sqlite3', :dbfile => ':memory:', :database => 'liquid_validations_test.db')
 
 ActiveRecord::Migration.verbose = false
 
