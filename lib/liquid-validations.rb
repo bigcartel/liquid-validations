@@ -1,4 +1,4 @@
-require 'liquid_validations/version'
+require 'liquid-validations/version'
 
 module LiquidValidations
   def validates_liquid_of(*attr_names)

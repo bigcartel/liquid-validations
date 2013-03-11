@@ -3,7 +3,7 @@ $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'rubygems'
 require 'active_record'
 require 'liquid'
-require 'liquid_validations'
+require 'liquid-validations'
 require 'minitest/spec'
 require 'minitest/autorun'
 require 'minitest/pride'
