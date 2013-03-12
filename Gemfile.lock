@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    liquid-validations (1.0.1)
+    liquid-validations (1.0.2)
       activerecord
       liquid
 
