@@ -16,7 +16,7 @@ module LiquidValidations
       end
 
       for error in errors
-        record.errors.add(attr_name, friendly_liquid_error(error))
+        record.errors.add(:base, friendly_liquid_error(error) + " in your #{ friendly_attr_name(attr_name) }")
       end
     end
   end
@@ -35,9 +35,9 @@ module LiquidValidations
       container_re  = /<\s*#{ container }.*>.*#{ variable_re }.*<\/\s*#{ container }\s*>/im
 
       if container.blank? && !(value =~ variable_re)
-        record.errors.add(attr_name, "You must include {{ #{ variable } }} in your #{ friendly_attr_name(attr_name) }")
+        record.errors.add(:base, "You must include {{ #{ variable } }} in your #{ friendly_attr_name(attr_name) }")
       elsif !container.blank? && !(value =~ container_re)
-        record.errors.add(attr_name, "You must include {{ #{ variable } }} inside the <#{ container }> tag of your #{ friendly_attr_name(attr_name) }")
+        record.errors.add(:base, "You must include {{ #{ variable } }} inside the <#{ container }> tag of your #{ friendly_attr_name(attr_name) }")
       end
     end
   end

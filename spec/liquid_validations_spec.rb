@@ -19,6 +19,7 @@ describe LiquidValidations do
       end
 
       @mixin = Mixin.new
+      @mixin.errors.clear
     end
 
     [ ' {{ Bad liquid ',
@@ -33,7 +34,7 @@ describe LiquidValidations do
     it 'should include the errors in the errors object' do
       @mixin.content = '{{ unclosed variable '
       @mixin.valid?
-      @mixin.errors.must_include(:content)
+      @mixin.errors.full_messages.any? { |e| e == "Variable '{{' was not properly closed in your content" }.must_equal true
     end
   end
 
@@ -58,7 +59,7 @@ describe LiquidValidations do
     it 'should include the errors in the errors object' do
       @mixin.content = '{{ josh_is_not_awesome }}'
       @mixin.valid?
-      @mixin.errors.must_include(:content)
+      @mixin.errors.full_messages.any? { |e| e == "You must include {{ josh_is_awesome }} in your content" }.must_equal true
     end
   end
 end
