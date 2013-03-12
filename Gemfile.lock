@@ -3,7 +3,7 @@ PATH
   specs:
     liquid-validations (1.1.0)
       activerecord
-      liquid
+      liquid (~> 2.4.1)
 
 GEM
   remote: https://rubygems.org/
@@ -22,7 +22,7 @@ GEM
     arel (3.0.2)
     builder (3.0.4)
     i18n (0.6.4)
-    liquid (2.5.0)
+    liquid (2.4.1)
     minitest (4.6.2)
     multi_json (1.6.1)
     rake (10.0.3)
