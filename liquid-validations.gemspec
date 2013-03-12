@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ['dev@bigcartel.com']
   gem.description   = %q{ ActiveRecord style validations for Liquid content in your ActiveRecord models. See the README to get the lowdown. }
   gem.summary       = %q{ ActiveRecord style validations for Liquid content in your ActiveRecord models. }
-  gem.homepage      = 'https://github.com/bigcartel/liquid-validations'
+  gem.homepage      = 'https://rubygems.org/gems/liquid-validations'
   gem.license       = 'MIT'
 
   gem.files         = `git ls-files`.split($/)
